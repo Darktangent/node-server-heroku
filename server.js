@@ -38,6 +38,7 @@ app.get('/', (req, res) => {
         // currentYear: new Date().getFullYear(),
         welcomeMessage: "Welcome to the home page"
     })
+
     // res.send('<h1>Hello Express</h1>')
     // res.send({
     //     name: 'Rohan',
@@ -57,6 +58,12 @@ app.get('/about', (req, res) => {
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage: "Unable to resolve request"
+    })
+})
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', {
+        pageTitle: 'Projects Page',
+        welcomeMessage: "Welcome to the Projects Page"
     })
 })
 
